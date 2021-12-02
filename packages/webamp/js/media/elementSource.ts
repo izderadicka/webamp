@@ -21,7 +21,7 @@ export default class ElementSource {
     this._context = context;
     this._destination = destination;
     this._audio = document.createElement("audio");
-    this._audio.crossOrigin = "anonymous";
+    this._audio.crossOrigin = "use-credentials";
     this._stalled = false;
     this._status = MEDIA_STATUS.STOPPED;
 

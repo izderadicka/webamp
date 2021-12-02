@@ -35,7 +35,7 @@ export function genMediaDuration(url: string): Promise<number> {
     // TODO: Does this actually stop downloading the file once it's
     // got the duration?
     const audio = document.createElement("audio");
-    audio.crossOrigin = "anonymous";
+    audio.crossOrigin = "use-credentials";
     const durationChange = () => {
       resolve(audio.duration);
       audio.removeEventListener("durationchange", durationChange);
